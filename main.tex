@@ -1,0 +1,91 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  %\setbeamertemplate{navigation symbols}{} %hide navigation symbols
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\colorlet{beamer@blendedblue}{green!40!black}
+
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pgf}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{tabularx}
+
+
+
+\titlegraphic{\includegraphics[height=2.7cm]{images/risk_assessment_matrix.pdf}\hspace*{1.05cm}~%
+   \includegraphics[width=3.5cm]{images/functional_analysis.pdf}\hspace*{0.55cm}~%
+    \includegraphics[height=2.3cm]{images/pha1.pdf}
+}
+\title[Restaurant alarm system]{\textbf{Restaurant alarm system}}
+\subtitle{System Hazard Analysis}
+\author[Alex Delbono]{Alex Delbono \\ }
+\institute[Politecnico di Milano]{\href{mailto:alex.delbono@mail.polimi.it}{alex.delbono@mail.polimi.it}  
+		\newline 
+		Politecnico di Milano}
+\logo{\pgfputat{\pgfxy(0,7)}{\pgfbox[right,base]{\includegraphics[height=1.8cm]{images/logoPolimi.pdf}}}}
+\date{December 4 2016}
+
+
+
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%   DOCUMENT   %%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%   TITLE   %%%%%%%%%%%%
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%%%%%% TABLE OF CONTENTS %%%%%
+\begin{frame}{Overview}
+\tableofcontents
+\end{frame}
+
+
+%%%%%% CONTENT %%%%%%%%%%
+\section{System description}
+\label{sec:system_description}
+\input{slides/system_description.tex}
+
+\section{Functional analysis}
+\label{sec:functional_analysis}
+\input{slides/functional_analysis.tex}
+
+\section{Architectural analysis}
+\label{sec:architectural_analysis}
+\input{slides/architectural_analysis.tex}
+
+\section{Qualitative analysis (PHA)}
+\label{sec:qualitative_analysis}
+\input{slides/qualitative_analysis.tex}
+
+\section{Quantitative analysis}
+\label{sec:quantitative_analysis}
+\input{slides/quantitative_analysis.tex}
+
+
+%%%%% BIBLIOGRAPHY %%%%%
+\input{slides/bibliography.tex}
+
+%%%%%% END %%%%%%%%%%%
+\end{document}
